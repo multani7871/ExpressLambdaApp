@@ -7,6 +7,14 @@ app.get('/', function(req, res) {
   });
 });
 
+app.get('/someRandomness', function (req, res) {
+  const random = Math.random();
+
+  res.send({
+    "Output": random
+  });
+});
+
 app.post('/', function(req, res) {
   res.send({
     "Output": "Hello World!"
